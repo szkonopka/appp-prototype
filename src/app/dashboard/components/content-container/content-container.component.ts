@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DashboardService } from '../../services/dashboard.service';
 
 @Component({
   selector: 'app-content-container',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContentContainerComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dashboardService : DashboardService) { }
 
   ngOnInit() {
+    
   }
 
 }

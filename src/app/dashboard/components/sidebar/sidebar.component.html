@@ -8,9 +8,9 @@
     </div>
   </div>
   <ul class="sidebar__options">
-    <li class="sidebar__option sidebar__option_active"><a href="">Summary</a></li>
-    <li class="sidebar__option"><a href="">Projects</a></li>
-    <li class="sidebar__option"><a href="">Statistics</a></li>
-    <li class="sidebar__option"><a href="">Sprints</a></li>
+    <li (click)="switchContainer(0)" class="sidebar__option sidebar__option_active">Summary</li>
+    <li (click)="switchContainer(1)"class="sidebar__option">Projects</li>
+    <li (click)="switchContainer(2)"class="sidebar__option">Statistics</li>
+    <li (click)="switchContainer(3)"class="sidebar__option">Sprints</li>
   </ul>
 </div>

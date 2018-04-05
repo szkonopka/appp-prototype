@@ -1,6 +1,17 @@
-<app-info-bar></app-info-bar>
-<div class="content-container">
-  <app-tasks-list> </app-tasks-list>
-  <app-tasks-list> </app-tasks-list>
-  <app-tasks-list> </app-tasks-list>
+<div class="content-container">  
+  <div *ngIf="this.dashboardService.currentModuleContainer === 'summary'"class="container">
+    <app-tasks-list> </app-tasks-list>
+    <app-tasks-list> </app-tasks-list>
+    <app-tasks-list> </app-tasks-list>
+    <app-newsfeed></app-newsfeed>
+  </div>  
+
+  <div *ngIf="this.dashboardService.currentModuleContainer === 'projects'"class="container">
+    <app-projects></app-projects>
+  </div>  
+
+  <div *ngIf="this.dashboardService.currentModuleContainer === 'statistics'"class="container">
+    
+  </div>  
+
 </div>

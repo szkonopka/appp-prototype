@@ -5,9 +5,11 @@
     background: white
     height: 100%
     overflow: hidden
+    width: 230px
     -webkit-box-shadow: 3px 0px 36px -12px rgba(0,0,0,0.18)
     -moz-box-shadow: 3px 0px 36px -12px rgba(0,0,0,0.18)
     box-shadow: 3px 0px 36px -12px rgba(0,0,0,0.18)
+    z-index: 999
 
 .sidebar__options
     position: relative
@@ -15,6 +17,7 @@
     padding: 24px
     li
         padding: 12px
+        font-weight: 700
         cursor: pointer
 
 .sidebar__header
@@ -42,6 +45,8 @@
     position: relative
 
 .sidebar__option_active
+    a
+        color: #486ffa
     &:after, &:before
         content: ''
         position: absolute
@@ -52,11 +57,11 @@
         height: 100%
         right: -49px
         top: 0
-        background: #00C853
+        background: #486ffa
     &:after
         width: 300%
         height: 100%
-        background: #E8F5E9
+        background: #e7ebfb
         left: -100%
         top: 0
         z-index: -1

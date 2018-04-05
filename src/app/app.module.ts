@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { AuthenticationService } from './core/services/authentication.service';
+import { routing } from './config/app.routing';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { AuthenticationService } from './core/services/authentication.service';
   ],
   imports: [
     BrowserModule,
-    DashboardModule
+    DashboardModule,
+    routing
   ],
   providers: [
     AuthenticationService
