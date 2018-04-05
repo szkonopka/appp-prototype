@@ -6,6 +6,7 @@ import { ContentContainerComponent } from './components/content-container/conten
 import { TasksListComponent } from './components/tasks-list/tasks-list.component';
 import { StatisticsComponent } from './components/statistics/statistics.component';
 import { ScheduleComponent } from './components/schedule/schedule.component';
+import { InfoBarComponent } from './components/info-bar/info-bar.component';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { ScheduleComponent } from './components/schedule/schedule.component';
     ContentContainerComponent,
     TasksListComponent,
     StatisticsComponent,
-    ScheduleComponent
+    ScheduleComponent,
+    InfoBarComponent
   ],
   exports: [
     DashboardComponent

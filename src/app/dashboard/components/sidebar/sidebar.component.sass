@@ -4,6 +4,10 @@
     float: left
     background: white
     height: 100%
+    overflow: hidden
+    -webkit-box-shadow: 3px 0px 36px -12px rgba(0,0,0,0.18)
+    -moz-box-shadow: 3px 0px 36px -12px rgba(0,0,0,0.18)
+    box-shadow: 3px 0px 36px -12px rgba(0,0,0,0.18)
 
 .sidebar__options
     position: relative
@@ -13,10 +17,47 @@
         padding: 12px
         cursor: pointer
 
+.sidebar__header
+    position: relative
+    text-align: center
+    margin-bottom: 12px
+    border-bottom: 1px solid #6c8795
+
 .sidebar__photo
+    position: relative
     width: 75px
     height: 75px
     overflow: hidden
+    left: 50%
+    transform: translate(-50%, 0)
 
 .sidebar__photo_oval
     border-radius: 50%
+
+.sidebar__label
+    margin-top: 24px
+    margin-bottom: 12px
+
+.sidebar__option
+    position: relative
+
+.sidebar__option_active
+    &:after, &:before
+        content: ''
+        position: absolute
+    &:before
+        content: ''
+        position: absolute
+        width: 4px
+        height: 100%
+        right: -49px
+        top: 0
+        background: #00C853
+    &:after
+        width: 300%
+        height: 100%
+        background: #E8F5E9
+        left: -100%
+        top: 0
+        z-index: -1
+    
