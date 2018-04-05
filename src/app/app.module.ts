@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { AuthenticationService } from './core/services/authentication.service';
 import { routing } from './config/app.routing';
+import { ProjectModule } from './project/project.module';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { routing } from './config/app.routing';
   imports: [
     BrowserModule,
     DashboardModule,
+    ProjectModule,
     routing
   ],
   providers: [
