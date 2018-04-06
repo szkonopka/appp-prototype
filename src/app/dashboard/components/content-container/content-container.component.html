@@ -1,17 +1,21 @@
 <div class="content-container">  
   <div *ngIf="this.dashboardService.currentModuleContainer === 'summary'"class="container">
-    <app-tasks-list> </app-tasks-list>
-    <app-tasks-list> </app-tasks-list>
-    <app-tasks-list> </app-tasks-list>
+    <div *ngFor="let project of this.projectService.projects">
+      <app-tasks-list [project]="project"></app-tasks-list>  
+    </div>
     <app-newsfeed></app-newsfeed>
   </div>  
 
   <div *ngIf="this.dashboardService.currentModuleContainer === 'projects'"class="container">
     <app-projects></app-projects>
+    <app-newsfeed></app-newsfeed>
   </div>  
 
   <div *ngIf="this.dashboardService.currentModuleContainer === 'statistics'"class="container">
     
   </div>  
 
+  <div *ngIf="this.dashboardService.currentModuleContainer === 'sprints'"class="container">
+    <app-sprints></app-sprints>  
+  </div>  
 </div>

@@ -5,7 +5,7 @@ import { Routes } from '@angular/router/src/config';
 
 const appRoutes: Routes = [
     { path: '', component: DashboardComponent },
-    { path: 'project', component: ProjectComponent },
+    { path: 'projects/:slug', component: ProjectComponent },
     { path: '**', redirectTo: '' }
 ];
 

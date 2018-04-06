@@ -1,22 +1,14 @@
 <ul class="projects">
   <li class="project component project_adder">
-    <h1>Add project...</h1>
-    <i class="fas fa-plus"></i>
+    <div class="project__description">
+      <h1>Add project...</h1>
+    </div>
   </li>
-  <li class="project component project_searcher">
-      <h1>Search for new project...</h1>
-      <i class="fas fa-plus"></i>
+  <li *ngFor="let project of this.projectService.projects" class="project component">
+    <a [routerLink]="['/projects/', project.Slug]" preserveQueryParams [queryParams]="{ project: project }"></a>
+    <div class="project__description">
+      <h1>{{ project.Name }}</h1>
+      <p>{{ project.ActiveTasks.length }} tasks</p>
+    </div>
   </li>
-  <li class="project component">
-    <h1>Project #1</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquam molestie velit vel vehicula. Duis in vestibulum sem. Nullam bibendum condimentum tincidunt. Fusce vitae sodales tellus.</p>
-  </li>
-  <li class="project component">
-      <h1>Project #1</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquam molestie velit vel vehicula. Duis in vestibulum sem. Nullam bibendum condimentum tincidunt. Fusce vitae sodales tellus.</p>
-    </li>
-    <li class="project component">
-        <h1>Project #1</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquam molestie velit vel vehicula. Duis in vestibulum sem. Nullam bibendum condimentum tincidunt. Fusce vitae sodales tellus.</p>
-      </li>
 </ul>

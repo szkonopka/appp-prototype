@@ -12,10 +12,14 @@ import { ActivitiesComponent } from './components/activities/activities.componen
 import { OptionsComponent } from './components/options/options.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { DashboardService } from './services/dashboard.service';
+import { ProjectService } from '../shared/services/project.service';
+import { SprintsComponent } from './components/sprints/sprints.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   declarations: [
     SidebarComponent,
@@ -28,13 +32,15 @@ import { DashboardService } from './services/dashboard.service';
     NewsfeedComponent,
     ActivitiesComponent,
     OptionsComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    SprintsComponent
   ],
   exports: [
     DashboardComponent
   ],
   providers: [
-    DashboardService
+    DashboardService,
+    ProjectService
   ],
 })
 export class DashboardModule { }
