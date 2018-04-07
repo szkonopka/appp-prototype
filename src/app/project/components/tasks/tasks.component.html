@@ -1,47 +1,12 @@
 <ul class="tasks">
-  <li class="task component">
-    <div class="task__points"><h3>8</h3></div>
-    <div class="task__content">
-      <h3>Unit test performance for HTTP GET methods for class from Database namespace</h3>
-      <div class="task__photo">
-          <img src="http://i.pravatar.cc/40" alt="">
-        </div>
-    </div>
-  </li>
-  <li class="task component">
-      <div class="task__points"><h3>8</h3></div>
+  <h1>Tasks</h1>
+  <li class="task component" *ngFor="let task of tasks">
+      <div class="task__points"><h3>{{ task.ProductivityPoints }}<span>pp</span></h3></div>
       <div class="task__content">
-        <h3>Unit test performance for HTTP GET methods for class from Database namespace</h3>
+        <h3>{{ task.Name }}</h3>
         <div class="task__photo">
           <img src="http://i.pravatar.cc/40" alt="">
         </div>
       </div>
-    </li>
-    <li class="task component">
-        <div class="task__points"><h3>8</h3></div>
-        <div class="task__content">
-          <h3>Unit test performance for HTTP GET methods for class from Database namespace</h3>
-          <div class="task__photo">
-              <img src="http://i.pravatar.cc/40" alt="">
-            </div>
-        </div>
-      </li>
-      <li class="task component">
-          <div class="task__points"><h3>8</h3></div>
-          <div class="task__content">
-            <h3>Unit test performance for HTTP GET methods for class from Database namespace</h3>
-            <div class="task__photo">
-              <img src="http://i.pravatar.cc/40" alt="">
-            </div>
-          </div>
-        </li>
-        <li class="task component">
-            <div class="task__points"><h3>8</h3></div>
-            <div class="task__content">
-              <h3>Unit test performance for HTTP GET methods for class from Database namespace</h3>
-              <div class="task__photo">
-                <img src="http://i.pravatar.cc/40" alt="">
-              </div>
-            </div>
-          </li>
+  </li>
 </ul>

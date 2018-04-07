@@ -6,6 +6,8 @@ import { ActivitiesHubComponent } from './components/activities-hub/activities-h
 import { HeaderComponent } from './components/header/header.component';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from '../dashboard/dashboard.component';
+import { TimelineComponent } from './components/timeline/timeline.component';
+import { DependenciesComponent } from './components/dependencies/dependencies.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent }
@@ -20,7 +22,9 @@ const routes: Routes = [
     ProjectComponent,
     TasksComponent,
     ActivitiesHubComponent,
-    HeaderComponent
+    HeaderComponent,
+    TimelineComponent,
+    DependenciesComponent
   ],
   exports: [
     ProjectComponent

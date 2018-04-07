@@ -1,0 +1,91 @@
+h1
+    padding: 25px
+
+.timeline
+    position: relative
+    width: 67%
+
+.timeline__axis
+    position: relative
+    float: none
+    max-width: 100%
+    width: 100%
+    min-height: 64px
+    &:before
+        clear: both
+        float: none
+    border-bottom-left-radius: 0
+    border-bottom-right-radius: 0
+    margin-bottom: 0
+
+.timeline__line
+    margin-top: 12px
+    position: relative
+    height: 10px
+    background: #E8F5E9
+    border-radius: 25px
+    float: none
+    &:before
+        content: ''
+        position: absolute
+        background: #00C853
+        width: 60%
+        height: 100%
+        top: 0
+        left: 0
+        border-radius: 25px
+
+.timeline__description
+    position: relative
+    float: none
+    max-width: 100%
+    width: 100%
+    min-height: 64px
+    &:before
+        clear: both
+        float: none
+    margin-top: 0
+    border-top-left-radius: 0
+    border-top-right-radius: 0
+        
+.timeline__labels
+    width: 100%
+    height: auto
+    overflow: hidden
+
+.timeline__start
+    float: left
+    &:before
+        content: ''
+        background: #E8F5E9
+        position: absolute
+        height: 34px
+        width: 3px
+        left: 25px
+
+.timeline__end
+    float: right
+    &:before
+        content: ''
+        background: #E8F5E9
+        position: absolute
+        height: 34px
+        width: 3px
+        right: 25px
+
+.timeline__start, .timeline__end
+    font-size: 10px
+    padding: 6px
+    background: #E8F5E9
+    border-radius: 5px
+
+.timeline__point
+    position: absolute
+    height: 12px
+    width: 12px
+    background: #171b35
+    left: 50%
+    top: -3px
+    transform: rotate(45deg)
+    cursor: pointer
+    

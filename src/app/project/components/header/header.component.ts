@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { Input } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,6 +8,7 @@ import { RouterLink } from '@angular/router';
   styleUrls: ['./header.component.sass']
 })
 export class HeaderComponent implements OnInit {
+  @Input() name: string;
 
   constructor() { }
 

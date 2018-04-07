@@ -1,6 +1,9 @@
 <div class="project">
-  {{ this.project.Name }}
-  <app-header></app-header>
-  <app-tasks></app-tasks>
-  <app-activities-hub></app-activities-hub>
+  <app-header [name]="project.Name"></app-header>
+  <app-timeline></app-timeline>
+  <app-tasks [tasks]="project.ActiveTasks"></app-tasks>
+  <div class="project__side-info">
+    <app-activities-hub></app-activities-hub>
+    <app-dependencies></app-dependencies>
+  </div>  
 </div>

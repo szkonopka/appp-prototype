@@ -1,9 +1,9 @@
 .info-bar
-    position: absolute
+    position: fixed
     top: 0
     width: 100%
     background: white
-    z-index: 0
+    z-index: 1
     padding: 32px
     padding-left: 262px
     height: 100px
@@ -15,15 +15,30 @@
     position: absolute
     width: 50%
     height: 10px
-    background: #e7ebfb
+    background: #E8F5E9
     border-radius: 25px
     &:before
         content: ''
         position: absolute
-        background: #486ffa
+        background: #00C853
         width: 60%
         height: 100%
         top: 0
         left: 0
         border-radius: 25px
 
+.progress__info
+    position: absolute
+    right: 0
+    padding: 3px
+    border-radius: 5px
+    top: -30px
+    background: #E8F5E9
+    font-size: 12px
+    &:before
+        content: ''
+        background: #E8F5E9
+        position: absolute
+        height: 34px
+        width: 3px
+        right: 25px

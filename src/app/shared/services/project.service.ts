@@ -7,10 +7,13 @@ export class ProjectService {
   projects: Project[] = [
     new Project(0, "Mobile application for Rossman"),
     new Project(1, "PR Campaing for Empik"),
-    new Project(2, "Family")
+    new Project(2, "Family"),
+    new Project(3, "Garden expansion")
   ];  
 
-  constructor() { }
+  constructor() {
+    this.addTasksToProject();
+   }
 
   addTasksToProject() {
     this.projects[0].ActiveTasks = [
@@ -31,5 +34,15 @@ export class ProjectService {
       new Task(8, 2, "Check kids homework", null, 0, 6),
       new Task(9, 2, "Repair dishwasher", null, 0, 2),
     ];
+
+    this.projects[3].ActiveTasks = [
+      new Task(10, 3, "Buy needed tools", null, 0, 2),
+      new Task(10, 3, "Choose new paint for fence", null, 0, 2),
+      new Task(10, 3, "Plant 3 ", null, 0, 2),
+    ];
+  }
+
+  getProject(projectId: number) {
+    return this.projects[projectId];
   }
 }

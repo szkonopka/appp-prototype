@@ -7,7 +7,9 @@ import { ProjectService } from '../../../shared/services/project.service';
   styleUrls: ['./content-container.component.sass']
 })
 export class ContentContainerComponent implements OnInit {
-
+  tasksContainersPerRow: number = 3;
+  rows = Array.from(Array(Math.ceil(this.projectService.projects.length / this.tasksContainersPerRow)).keys());
+  
   constructor(
     private dashboardService : DashboardService,
     private projectService: ProjectService

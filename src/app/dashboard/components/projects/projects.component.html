@@ -5,10 +5,13 @@
     </div>
   </li>
   <li *ngFor="let project of this.projectService.projects" class="project component">
-    <a [routerLink]="['/projects/', project.Slug]" preserveQueryParams [queryParams]="{ project: project }"></a>
+    <a [routerLink]="['/projects/', project.Slug]" [queryParams]="{ ProjectId: project.Id }"></a>
     <div class="project__description">
+      <h5>Sprint #23 in progress</h5>
       <h1>{{ project.Name }}</h1>
-      <p>{{ project.ActiveTasks.length }} tasks</p>
+      <span>
+        <p>{{ project.ActiveTasks.length }} tasks</p>
+      </span>
     </div>
   </li>
 </ul>

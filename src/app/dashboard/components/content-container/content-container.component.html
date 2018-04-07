@@ -1,9 +1,15 @@
 <div class="content-container">  
-  <div *ngIf="this.dashboardService.currentModuleContainer === 'summary'"class="container">
-    <div *ngFor="let project of this.projectService.projects">
-      <app-tasks-list [project]="project"></app-tasks-list>  
+  <div *ngIf="this.dashboardService.currentModuleContainer === 'summary'" class="container">
+    <div class="content-container__header">
+        <h1>Today<span class="date">9th Apr</span></h1>
+    </div>
+    <div *ngFor="let row of rows" class="row">
+      <div *ngFor="let project of this.projectService.projects | slice:(row * tasksContainersPerRow):(row + 1) * tasksContainersPerRow">  
+        <app-tasks-list *ngIf="project.ActiveTasks.length > 0" [project]="project"></app-tasks-list>  
+      </div>
     </div>
     <app-newsfeed></app-newsfeed>
+    
   </div>  
 
   <div *ngIf="this.dashboardService.currentModuleContainer === 'projects'"class="container">
