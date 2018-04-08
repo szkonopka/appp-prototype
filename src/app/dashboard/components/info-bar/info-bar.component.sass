@@ -6,12 +6,17 @@
     z-index: 1
     padding: 32px
     padding-left: 262px
-    height: 100px
+    height: 125px
     h1
         font-size: 12px
         padding-bottom: 12px
+    -webkit-box-shadow: 0px 3px 36px -12px rgba(0,0,0,0.18)
+    -moz-box-shadow: 0px 3px 36px -12px rgba(0,0,0,0.18)
+    box-shadow: 0px 3px 36px -12px rgba(0,0,0,0.18)
+    z-index: 99
 
 .progress
+    margin-top: 25px
     position: absolute
     width: 50%
     height: 10px
@@ -34,7 +39,10 @@
     border-radius: 5px
     top: -30px
     background: #E8F5E9
-    font-size: 12px
+    font-size: 10px
+    text-transform: uppercase
+    font-weight: 900
+    color: #00C853
     &:before
         content: ''
         background: #E8F5E9
@@ -42,3 +50,13 @@
         height: 34px
         width: 3px
         right: 25px
+        z-index: -1
+
+.progress__info_start
+    left: 0
+    right: initial
+    background: #00C853
+    color: white
+    &:before
+        background: #00C853
+        left: 25px  

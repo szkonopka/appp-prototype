@@ -1,4 +1,6 @@
+
 <ul class="projects">
+  <div class="container__header"><h1>Active projects</h1></div>
   <li class="project component project_adder">
     <div class="project__description">
       <h1>Add project...</h1>
@@ -6,10 +8,13 @@
   </li>
   <li *ngFor="let project of this.projectService.projects" class="project component">
     <a [routerLink]="['/projects/', project.Slug]" [queryParams]="{ ProjectId: project.Id }"></a>
+    <span class="project__pin">
+        <i class="fas fa-thumbtack"></i>
+    </span>
     <div class="project__description">
       <h5>Sprint #23 in progress</h5>
       <h1>{{ project.Name }}</h1>
-      <span>
+      <span class="project__details">
         <p>{{ project.ActiveTasks.length }} tasks</p>
       </span>
     </div>

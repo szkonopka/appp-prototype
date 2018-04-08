@@ -26,7 +26,11 @@ export class ProjectService {
       new Task(3, 1, "Feedback of facebook graphics", null, 0, 2),
       new Task(4, 1, "Write screenplay for the ad", null, 0, 4),
       new Task(5, 1, "Buy some sody pop", null, 0, 1),
-      new Task(6, 1, "Create a brief for next meetings", null, 0, 4)
+      new Task(6, 1, "Send request of printing to printing house", null, 0, 4),
+      new Task(13, 1, "Contact with company", null, 0, 4),
+      new Task(14, 1, "Create a brief for next meetings", null, 0, 4),
+      new Task(15, 1, "Create a brief for next meetings", null, 0, 4),
+      new Task(16, 1, "Create a brief for next meetings", null, 0, 4),
     ];
 
     this.projects[2].ActiveTasks = [
@@ -37,8 +41,8 @@ export class ProjectService {
 
     this.projects[3].ActiveTasks = [
       new Task(10, 3, "Buy needed tools", null, 0, 2),
-      new Task(10, 3, "Choose new paint for fence", null, 0, 2),
-      new Task(10, 3, "Plant 3 ", null, 0, 2),
+      new Task(11, 3, "Choose new paint for fence", null, 0, 2),
+      new Task(12, 3, "Plant 3 ", null, 0, 2),
     ];
   }
 

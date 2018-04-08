@@ -40,7 +40,8 @@ import { RouterModule } from '@angular/router';
   ],
   providers: [
     DashboardService,
-    ProjectService
+    ProjectService,
+    OptionsComponent
   ],
 })
 export class DashboardModule { }

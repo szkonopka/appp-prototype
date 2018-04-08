@@ -18,10 +18,12 @@
   </div>  
 
   <div *ngIf="this.dashboardService.currentModuleContainer === 'statistics'"class="container">
-    
+    <app-statistics></app-statistics>
+    <app-newsfeed></app-newsfeed>
   </div>  
 
   <div *ngIf="this.dashboardService.currentModuleContainer === 'sprints'"class="container">
     <app-sprints></app-sprints>  
+    <app-newsfeed></app-newsfeed>
   </div>  
 </div>

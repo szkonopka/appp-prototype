@@ -1,8 +1,18 @@
 <div class="project">
   <app-header [name]="project.Name"></app-header>
-  <app-timeline></app-timeline>
-  <app-tasks [tasks]="project.ActiveTasks"></app-tasks>
+  <div class="project__content-container">
+    <app-timeline></app-timeline>
+    <app-tasks [tasks]="project.ActiveTasks"></app-tasks>
+  </div>
   <div class="project__side-info">
+    <div class="options">
+      <ul>
+        <li class="option"><span class="option__not"><p>2</p></span><i class="fas fa-bell"></i></li>
+        <li class="option"><i class="fas fa-cog"></i></li>
+        <li class="option"><i class="fas fa-power-off"></i></li>
+        <li><i class="fas fa-ellipsis-h"></i></li>
+      </ul>
+    </div>
     <app-activities-hub></app-activities-hub>
     <app-dependencies></app-dependencies>
   </div>  

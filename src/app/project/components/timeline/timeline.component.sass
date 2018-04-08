@@ -1,14 +1,16 @@
 h1
     padding: 25px
+    font-weight: 900
+    padding-bottom: 0
 
 .timeline
     position: relative
-    width: 67%
+    width: 98%
 
 .timeline__axis
+    box-sizing: border-box
     position: relative
     float: none
-    max-width: 100%
     width: 100%
     min-height: 64px
     &:before
@@ -19,12 +21,14 @@ h1
     margin-bottom: 0
 
 .timeline__line
-    margin-top: 12px
+    position: relative
+    margin-top: 34px
     position: relative
     height: 10px
     background: #E8F5E9
     border-radius: 25px
     float: none
+    z-index: 99
     &:before
         content: ''
         position: absolute
@@ -36,6 +40,7 @@ h1
         border-radius: 25px
 
 .timeline__description
+    box-sizing: border-box
     position: relative
     float: none
     max-width: 100%
@@ -47,24 +52,44 @@ h1
     margin-top: 0
     border-top-left-radius: 0
     border-top-right-radius: 0
+    h3
+        color: #181a2f
+    border: 1px solid #3fb654
+    z-index: 999
         
 .timeline__labels
     width: 100%
     height: auto
     overflow: hidden
 
+.timeline__start, .timeline__end
+    top: -34px
+    position: absolute
+    font-size: 10px
+    padding: 6px
+    background: #E8F5E9
+    border-radius: 5px
+    font-weight: 900
+
 .timeline__start
     float: left
+    z-index: 1
+    background: #00C853
+    color: white
     &:before
         content: ''
-        background: #E8F5E9
+        background: #00C853
         position: absolute
         height: 34px
         width: 3px
         left: 25px
+        z-index: -1
 
 .timeline__end
+    right: 0
     float: right
+    z-index: 1
+    color: #00C853
     &:before
         content: ''
         background: #E8F5E9
@@ -72,20 +97,49 @@ h1
         height: 34px
         width: 3px
         right: 25px
+        z-index: -1
 
-.timeline__start, .timeline__end
-    font-size: 10px
-    padding: 6px
-    background: #E8F5E9
-    border-radius: 5px
 
 .timeline__point
     position: absolute
-    height: 12px
-    width: 12px
-    background: #171b35
+    height: 14px
+    width: 14px
+    background: #232430
     left: 50%
-    top: -3px
-    transform: rotate(45deg)
+    top: -2px
+    border-radius: 5px
+    cursor: pointer
+    &:before
+        content: ''
+        position: absolute
+        height: 30px
+        width: 2px
+        background: #3fb654
+        left: 50%
+        transform: translate(-50%, 0)
+        z-index: -1
+
+.timeline__point_left
+    left: 120px
+    &:before
+        display: none
+
+.timeline__point_right
+    right: 360px
+    left: initial
+    &:before
+        display: none
+
+.timeline__sprint-description
+    padding-bottom: 25px
+
+.timeline__btn
+    position: relative
+    display: inline-block
+    background: #00C853
+    padding: 6px
+    color: white
+    border-radius: 5px
+    font-weight: 700
     cursor: pointer
     

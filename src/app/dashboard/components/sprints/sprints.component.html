@@ -1,3 +1,23 @@
-<p>
-  sprints works!
-</p>
+<div *ngFor="let project of this.projectService.projects" class="sprint">
+    <h1>{{project.Name}}</h1>
+    <p>Sprint #{{project.Id}}</p>
+    <div class="timeline">
+        <div class="timeline__axis component">
+            <div class="timeline__labels">
+            </div>
+            <div class="timeline__line">
+                <div class="timeline__start">12 Mar, 2018</div>
+                <div class="timeline__end">19 Mar, 2018</div>
+                <div class="timeline__point"></div>
+                <div class="timeline__point timeline__point_left"></div>
+                <div class="timeline__point timeline__point_right"></div>
+            </div>
+        </div>
+        <div class="timeline__description component">
+            <h3>Prepare something</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit ipsum ante, in mattis felis rhoncus at. In suscipit eu mauris quis dignissim. Donec non dignissim sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit ipsum ante, in mattis felis rhoncus at. In suscipit eu mauris quis dignissim. Donec non dignissim sem. 
+            </p>
+        </div>
+    </div>
+</div>

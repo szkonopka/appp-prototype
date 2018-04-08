@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Project } from '../shared/models/project';
 import { ActivatedRoute, Router } from '@angular/router';
-import { setInterval } from 'timers';
 import { ProjectService } from '../shared/services/project.service';
 
 @Component({

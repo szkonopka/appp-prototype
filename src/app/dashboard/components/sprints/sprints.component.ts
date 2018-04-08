@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProjectService } from '../../../shared/services/project.service';
 
 @Component({
   selector: 'app-sprints',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SprintsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private projectService: ProjectService) { }
 
   ngOnInit() {
   }
