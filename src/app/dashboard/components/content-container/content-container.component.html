@@ -26,4 +26,7 @@
     <app-sprints></app-sprints>  
     <app-newsfeed></app-newsfeed>
   </div>  
+  <div *ngIf="this.dashboardService.currentModuleContainer === 'settings'"class="container">
+    <app-settings></app-settings>  
+  </div>  
 </div>

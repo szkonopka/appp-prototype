@@ -5,6 +5,7 @@ import { DashboardComponent } from './dashboard.component';
 import { ContentContainerComponent } from './components/content-container/content-container.component';
 import { TasksListComponent } from './components/tasks-list/tasks-list.component';
 import { StatisticsComponent } from './components/statistics/statistics.component';
+import { SetComponent } from './components/SettingProf/Set.component';
 import { ScheduleComponent } from './components/schedule/schedule.component';
 import { InfoBarComponent } from './components/info-bar/info-bar.component';
 import { NewsfeedComponent } from './components/newsfeed/newsfeed.component';
@@ -15,6 +16,7 @@ import { DashboardService } from './services/dashboard.service';
 import { ProjectService } from '../shared/services/project.service';
 import { SprintsComponent } from './components/sprints/sprints.component';
 import { RouterModule } from '@angular/router';
+
 
 @NgModule({
   imports: [
@@ -27,6 +29,7 @@ import { RouterModule } from '@angular/router';
     ContentContainerComponent,
     TasksListComponent,
     StatisticsComponent,
+    SetComponent,
     ScheduleComponent,
     InfoBarComponent,
     NewsfeedComponent,
